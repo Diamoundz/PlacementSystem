@@ -39,20 +39,17 @@ namespace AengelStudio.PlacementSystem.Editor
                 Directory.CreateDirectory(destPath);
             }
 
-            // Copy all files from source to destination
+            // Copy all files from source to destination using Unity's FileUtil
             string[] files = Directory.GetFiles(sourcePath, "*", SearchOption.TopDirectoryOnly);
             foreach (string file in files)
             {
-                // Skip .meta files - Unity will generate them
-                if (file.EndsWith(".meta"))
-                    continue;
-
                 string fileName = Path.GetFileName(file);
                 string destFile = Path.Combine(destPath, fileName);
 
                 if (!File.Exists(destFile))
                 {
-                    File.Copy(file, destFile, true);
+                    // Use Unity's FileUtil which handles .meta files automatically
+                    FileUtil.CopyFileOrDirectory(file, destFile);
                     Debug.Log($"[PlacementSystem] Imported {fileName} to {destPath}");
                 }
             }
