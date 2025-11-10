@@ -39,6 +39,15 @@ The system combines these algorithms with Unity's Job System and Burst compilati
 3. Select **Add package from git URL...**
 4. Enter: `https://github.com/Diamoundz/PlacementSystem.git`
 
+### Importing the Example Scene
+
+After installing the package, you can import the example scene:
+
+1. In Package Manager, select the **Placement System** package
+2. Look for the **Samples** section in the package details (right panel)
+3. Click **Import** next to "Example Scene"
+4. The example scene and assets will be copied to `Assets/Samples/Placement System/1.0.0/Example/`
+
 ## Quick Start
 
 ```csharp
