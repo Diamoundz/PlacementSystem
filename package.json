@@ -35,12 +35,5 @@
     "type": "git",
     "url": "https://github.com/Diamoundz/PlacementSystem.git"
   },
-  "samples": [
-    {
-      "displayName": "Example Scene",
-      "description": "Example scene demonstrating the placement system",
-      "path": "Samples~/Example"
-    }
-  ]
 }
 
